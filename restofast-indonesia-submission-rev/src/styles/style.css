@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@300;500&family=Rubik:wght@500&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rubik';
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/*
+  Skip to content
+ */
+
+.skip__to__content {
+  text-align: center;
+  margin-top:-20px ;
+  text-decoration: none;
+}
+
+.skip__to__content:focus {
+  color: lightsalmon;
+  margin: 0;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr ;
+  gap: 10px;
+  position: relative;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); 
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: black;
+  font-size: 25px;
+  user-select: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  width: 250px;
+  margin: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.app-bar .app-bar__navigation ul {
+  text-align: center;
+
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  transition-duration: 0.3s; 
+  color: lightsalmon;
+}
+
+
+/*
+  Jumbotron/Hero
+ */
+.hero img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+
+/*
+  Main Content
+*/
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.mainContent {
+  padding: 40px;
+  margin: 0;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+
+/*
+  Container Restaurants
+*/
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  margin: 32px 0;
+}
+
+/*
+  Restaurant Item
+*/
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: lightsalmon;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  text-align: center;
+  padding: 18px;
+  border-bottom: 1px solid lightsalmon;
+  margin-bottom: 10px;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  color: lightsalmon;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.restaurant-item .restaurant-item__content h3 a:hover {
+  color: lightgreen;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  scale:inherit;
+}
+
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+}
+
+/*
+  Detail Restaurant
+*/
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant .restaurant__image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+}
+
+.restaurant__description {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* 
+  List Foods & Drinks
+*/
+
+.restaurant__menu ul li {
+  list-style-type: none;
+}
+
+
+.restaurant__menu .drinks {
+  margin-top: 20px;
+}
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+  background-color: darkgrey;
+}
+
+footer p {
+  text-align: center;
+  color: black;
+}
+
+footer p a {
+  color: black;
+  text-decoration: none;
+  padding: 17px 0px;
+}
+
+/*
+   Favorite Button
+*/
+
+.like {
+  font-size: 18px;
+  bottom: 16px;
+  right: 16px;
+  color: white;
+  border: 0;
+  max-width: 1000px;
+  min-width: 200px;
+  width: 800px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.like:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.3s;
+}
+
+#likeButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* 
+  Back Button
+*/
+
+.back {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 55px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 0px;
+  background-color: darkgrey;
+}
+
+.back:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.3s;
+}
+
+.back a {
+  color: white;
+  text-decoration: none;
+  padding: 17px 40%;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .app-bar .app-bar__navigation ul li a:hover {
+    border-bottom: 1px solid lightsalmon;
+    transition-duration: 0.6s; 
+    color: lightsalmon;
+  }
+
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .restaurant {
+    grid-template-columns: auto 1fr;
+  }
+
+  .restaurant .restaurant__name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .restaurant .restaurant__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restaurants {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
